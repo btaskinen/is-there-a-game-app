@@ -4,3 +4,27 @@
   padding: 2rem;
   text-align: center;
 }
+
+.App_mainContent {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.App_ilvesLogo,
+.App_tapparaLogo {
+  height: 20rem;
+  width: 20rem;
+}
+
+.App_findOutButton {
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+  padding: 5rem;
+  font-size: 2rem;
+}
+
+.App_findOutButton:hover {
+  background-color: #7c7c7c7d;
+}
