@@ -3,7 +3,7 @@ import './App.css';
 const App = () => {
   return (
     <>
-      <div>
+      <div className="App_container">
         <h1>Is There A Game?</h1>
         <div className="App_mainContent">
           <img

@@ -1,28 +1,39 @@
 #root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+.App_container {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
 .App_mainContent {
+  width: 330px;
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: 10px;
 }
 
 .App_ilvesLogo,
 .App_tapparaLogo {
-  height: 20rem;
-  width: 20rem;
+  height: 110px;
+  width: 110px;
 }
 
 .App_findOutButton {
   border-radius: 50%;
-  height: 20rem;
-  width: 20rem;
-  padding: 5rem;
-  font-size: 2rem;
+  height: 110px;
+  width: 110px;
+  padding: 5px;
+  font-size: 1rem;
 }
 
 .App_findOutButton:hover {
