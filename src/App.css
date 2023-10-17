@@ -22,6 +22,16 @@
   padding: 10px;
 }
 
+.App_resultGame {
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.App_resultNoGame {
+}
+
 .App_ilvesLogo,
 .App_tapparaLogo {
   height: 110px;
@@ -38,4 +48,11 @@
 
 .App_findOutButton:hover {
   background-color: #7c7c7c7d;
+}
+
+.App_svg {
+  width: 200px;
+  height: 200px;
+  stroke: #fff;
+  fill: #fff;
 }
