@@ -1,0 +1,52 @@
+.ResultView_resultGame {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.ResultView_resultNoGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.ResultView_svg {
+  width: 100px;
+  height: 100px;
+  stroke: #fff;
+  padding-bottom: 10px;
+}
+
+.ResultView_svg.noGame {
+  stroke: #8ac926;
+  fill: #8ac926;
+}
+
+.ResultView_svg.game {
+  stroke: #ff595e;
+  fill: #ff595e;
+}
+
+.ResultView_backButton {
+  border: none;
+  color: #ffca3a;
+  font-family: inherit;
+  font-size: 20px;
+  background-color: inherit;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ResultView_backButton:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.ResultView_backButton:active {
+  text-decoration: none;
+}

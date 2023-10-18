@@ -1,5 +1,7 @@
 import { GameDetails } from '../types';
 import HappyFace from '../assets/smiley-square-face-svgrepo-com.svg?react';
+import SadFace from '../assets/sad-face-in-rounded-square-svgrepo-com.svg?react';
+import './ResultView.css';
 
 type Props = {
   game: GameDetails | null;
@@ -10,25 +12,26 @@ const ResultView = ({ game, setButtonClicked }: Props) => {
   return (
     <>
       {game ? (
-        <div className="App_resultGame">
-          <p>There is a Game Today!</p>
+        <div className="ResultView_resultGame">
+          <SadFace className="ResultView_svg game" />
+          <p>There is a Game Today.</p>
           <p>
             {game.tampereTeam} plays {game.opponent} at{' '}
             {game.date.substring(11, 16)}
           </p>
         </div>
       ) : (
-        <div className="App_resultNoGame">
-          <HappyFace className="App_svg" />
+        <div className="ResultView_resultNoGame">
+          <HappyFace className="ResultView_svg noGame" />
           <p>No game Today!</p>
-          <button
-            className="App_backButton"
-            onClick={() => setButtonClicked(false)}
-          >
-            Check again!
-          </button>
         </div>
       )}
+      <button
+        className="ResultView_backButton"
+        onClick={() => setButtonClicked(false)}
+      >
+        Check again!
+      </button>
     </>
   );
 };

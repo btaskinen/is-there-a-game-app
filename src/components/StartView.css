@@ -1,0 +1,44 @@
+.StartView_mainContent {
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.StartView_ilvesLogo,
+.StartView_tapparaLogo {
+  height: 110px;
+  width: 110px;
+}
+
+.StartView_findOutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  padding: 5px;
+  font-size: 1rem;
+  color: transparent;
+  background-color: #6a4c93;
+}
+
+.StartView_svg {
+  width: 90px;
+  height: 90px;
+  stroke: #000;
+}
+
+.StartView_findOutButton:hover {
+  background-color: #503971;
+}
+
+.StartView_findOutButton:active {
+  border: 3px solid #000;
+}
+
+.StartView_buttonText {
+  display: none;
+}

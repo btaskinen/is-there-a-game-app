@@ -11,8 +11,8 @@ const App = () => {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const onButtonClickHandler = () => {
-    // const selectedDateAsSubstring = selectedDate.toJSON().substring(0, 10);
-    const selectedDateAsSubstring = '2023-10-20';
+    const selectedDateAsSubstring = selectedDate.toJSON().substring(0, 10);
+    // const selectedDateAsSubstring = '2023-10-20';
     const foundDate = data.find(
       (game) => game.date.substring(0, 10) === selectedDateAsSubstring
     );
