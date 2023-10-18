@@ -50,3 +50,14 @@
 .ResultView_backButton:active {
   text-decoration: none;
 }
+
+@media screen and (min-width: 481px) {
+  .ResultView_resultGame {
+    width: 500px;
+  }
+
+  .ResultView_svg {
+    width: 150px;
+    height: 150px;
+  }
+}

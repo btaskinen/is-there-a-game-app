@@ -42,3 +42,27 @@
 .StartView_buttonText {
   display: none;
 }
+
+@media screen and (min-width: 481px) {
+  .StartView_mainContent {
+    width: 500px;
+    gap: 20px;
+  }
+
+  .StartView_ilvesLogo,
+  .StartView_tapparaLogo {
+    height: 150px;
+    width: 150px;
+  }
+
+  .StartView_findOutButton {
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .StartView_svg {
+    width: 130px;
+    height: 130px;
+  }
+}
