@@ -30,6 +30,10 @@
 }
 
 .App_resultNoGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
 .App_ilvesLogo,
@@ -51,8 +55,8 @@
 }
 
 .App_svg {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   stroke: #fff;
   fill: #fff;
 }
