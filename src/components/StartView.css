@@ -5,6 +5,15 @@
   padding: 10px;
 }
 
+.StartView_datePickerContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.StartView_label {
+  font-size: 24px;
+}
+
 .StartView_ilvesLogo,
 .StartView_tapparaLogo {
   height: 110px;

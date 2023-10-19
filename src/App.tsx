@@ -22,15 +22,27 @@ const App = () => {
     }
 
     setButtonClicked(true);
-
-    if (!selectedDate) setSelectedDate(new Date('2023-10-15T18:30:00Z'));
   };
+
+  const today = new Date();
+
+  const dateForTitle =
+    selectedDate.toJSON().substring(0, 10) === today.toJSON().substring(0, 10)
+      ? 'Today'
+      : `on ${selectedDate.getDate()}.${
+          selectedDate.getMonth() + 1
+        }.${selectedDate.getFullYear()}`;
 
   return (
     <>
       <div className="App_container">
-        <h1 data-cy="app-title">Is There A Game?</h1>
-        {!buttonClicked && <StartView onClick={onButtonClickHandler} />}
+        <h1 data-cy="app-title">Is There A Game {dateForTitle}?</h1>
+        {!buttonClicked && (
+          <StartView
+            onClick={onButtonClickHandler}
+            setSelectedDate={setSelectedDate}
+          />
+        )}
         {buttonClicked && (
           <ResultView game={game} setButtonClicked={setButtonClicked} />
         )}
