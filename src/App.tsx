@@ -29,7 +29,7 @@ const App = () => {
   return (
     <>
       <div className="App_container">
-        <h1>Is There A Game?</h1>
+        <h1 data-cy="app-title">Is There A Game?</h1>
         {!buttonClicked && <StartView onClick={onButtonClickHandler} />}
         {buttonClicked && (
           <ResultView game={game} setButtonClicked={setButtonClicked} />

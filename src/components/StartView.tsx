@@ -12,11 +12,13 @@ const StartView = ({ onClick }: Props) => {
         className="StartView_ilvesLogo"
         src="https://upload.wikimedia.org/wikipedia/fi/5/52/Tampereen_Ilveksen_logo.svg"
         alt="Logo of Tampere Ilves Ice Hockey Team"
+        data-cy="ilves-logo"
       />
       <button
         className="StartView_findOutButton"
         type="button"
         onClick={onClick}
+        data-cy="start-view-button"
       >
         <QuestionMark className="StartView_svg" />
         <i className="StartView_buttonText">Click to Find out!</i>
@@ -25,6 +27,7 @@ const StartView = ({ onClick }: Props) => {
         className="StartView_tapparaLogo"
         src="https://upload.wikimedia.org/wikipedia/fi/3/32/Tapparan_logo.svg"
         alt="Logo of Tampere Tappera Ice Hockey Team"
+        data-cy="tappara-logo"
       />
     </div>
   );
