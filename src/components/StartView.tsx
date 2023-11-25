@@ -21,6 +21,7 @@ const StartView = ({ onClick, setSelectedDate }: Props) => {
           min="2023-09-13"
           max="2024-03-12"
           onChange={(event) => datePickerHandler(event.target.value)}
+          data-cy="date-picker"
         />
       </div>
 

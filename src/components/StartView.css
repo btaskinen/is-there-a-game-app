@@ -7,7 +7,27 @@
 
 .StartView_datePickerContainer {
   display: flex;
+  align-items: center;
   gap: 10px;
+  color: #ffca3a;
+}
+
+input[type='date'] {
+  background-color: #242424;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  color: #ffca3a;
+  border: none;
+  outline: none;
+  gap: 10px;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #ffca3a;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .StartView_label {
@@ -32,6 +52,7 @@
   font-size: 1rem;
   color: transparent;
   background-color: #6a4c93;
+  cursor: pointer;
 }
 
 .StartView_svg {
