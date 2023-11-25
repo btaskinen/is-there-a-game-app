@@ -6,7 +6,7 @@ describe('Is There A Game App', () => {
   });
 
   it('Visit start page', () => {
-    cy.get('[data-cy="app-title"]').contains('Is There A Game?');
+    cy.get('[data-cy="app-title"]').contains('Is There A Game Today?');
     cy.get('[data-cy="ilves-logo"]').should(
       'have.attr',
       'src',
@@ -24,7 +24,7 @@ describe('Is There A Game App', () => {
 
   it('click question mark button', () => {
     cy.get('[data-cy="start-view-button"]').click();
-    cy.get('[data-cy="app-title"]').contains('Is There A Game?');
+    cy.get('[data-cy="app-title"]').contains('Is There A Game Today?');
     cy.get('[data-cy="back-button"]').should('have.text', 'Check again!');
   });
 
@@ -52,5 +52,19 @@ describe('Is There A Game App', () => {
     cy.get('[data-cy="result-container"]')
       .children()
       .should('have.class', 'noGame');
+  });
+
+  it.only('date picker selects correct date', () => {
+    cy.get('[data-cy="date-picker"]').type('2023-11-23').click();
+    cy.get('[data-cy="app-title"]').contains('Is There A Game on 23.11.2023?');
+    cy.get('[data-cy="start-view-button"]').click();
+    cy.get('[data-cy="result-text"]').should(
+      'have.text',
+      'There is a Game Today.'
+    );
+    cy.get('[data-cy="game-details"]').should(
+      'have.text',
+      'Ilves plays Jukurit at 18:30'
+    );
   });
 });
