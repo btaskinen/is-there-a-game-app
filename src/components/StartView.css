@@ -12,22 +12,39 @@
   color: #ffca3a;
 }
 
-input[type='date'] {
-  background-color: #242424;
+.react-datepicker__input-container {
   padding: 10px;
+}
+
+input[type='text'] {
+  background-color: #242424;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 16px;
   color: #ffca3a;
   border: none;
   outline: none;
-  gap: 10px;
 }
 
-::-webkit-calendar-picker-indicator {
+.react-datepicker__tab-loop {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.react-datepicker__header {
+  background-color: #242424;
+}
+
+.react-datepicker__month-container {
   background-color: #ffca3a;
   padding: 5px;
   cursor: pointer;
   border-radius: 3px;
+  gap: 10px;
+}
+
+.react-datepicker__calendar-icon.react-datepicker__calendar-icon {
+  fill: #ffca3a;
+  cursor: pointer;
 }
 
 .StartView_label {

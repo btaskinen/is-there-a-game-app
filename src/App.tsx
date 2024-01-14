@@ -40,6 +40,7 @@ const App = () => {
         {!buttonClicked && (
           <StartView
             onClick={onButtonClickHandler}
+            selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
           />
         )}

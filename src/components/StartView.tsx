@@ -1,26 +1,32 @@
 import QuestionMark from '../assets/question-mark-draw-svgrepo-com.svg?react';
+import DatePicker from 'react-datepicker';
 import './StartView.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 type Props = {
   onClick: () => void;
+  selectedDate: Date;
   setSelectedDate: React.Dispatch<React.SetStateAction<Date>>;
 };
 
-const StartView = ({ onClick, setSelectedDate }: Props) => {
-  const datePickerHandler = (value: string) => {
-    const pickedDate = new Date(value);
-    setSelectedDate(pickedDate);
-  };
+const StartView = ({ onClick, selectedDate, setSelectedDate }: Props) => {
+  const datePickerHandler = (date: Date | null) => {
+    console.log(date);
 
+    if (date === null) {
+      setSelectedDate(new Date());
+    } else {
+      setSelectedDate(date);
+    }
+  };
   return (
     <>
       <div className="StartView_datePickerContainer">
         <label className="StartView_label">Select Date</label>
-        <input
-          type="date"
-          min="2023-09-13"
-          max="2024-03-12"
-          onChange={(event) => datePickerHandler(event.target.value)}
+        <DatePicker
+          showIcon
+          selected={selectedDate}
+          onChange={(date) => datePickerHandler(date)}
           data-cy="date-picker"
         />
       </div>
